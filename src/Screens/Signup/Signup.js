@@ -3,7 +3,7 @@ import { Image, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import styles from './styles';
 
-export default function Singup({navigation}){
+export default function Signup({navigation}){
     //data we are saving
     //we should maybe do one field for year, one for make, one for model
     const [fullName, setFullName] = useState('');
