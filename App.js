@@ -14,9 +14,11 @@ const Stack = createStackNavigator();
 export default function App() {
   const [loading,setLoading] = useState(true);
   const [user, setUser] = useState(null);
+  //remove header from screens 
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator
+      screenOptions={{headerShown: false}}>
         { user ? (
           <Stack.Screen name="Home">
             {props => <Home {...props} extraData={user} />}
