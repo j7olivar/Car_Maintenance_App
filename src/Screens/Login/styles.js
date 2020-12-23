@@ -13,7 +13,7 @@ export default StyleSheet.create({
         alignSelf: "center",
         margin: 30},
     input: {
-        height: 48,
+        height: 42,
         borderRadius: 5,
         overflow: 'hidden',
         backgroundColor: 'white',
