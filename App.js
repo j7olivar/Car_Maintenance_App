@@ -15,19 +15,21 @@ const Stack = createStackNavigator();
 //create tab navigator for the homescreen 
 const tab = createBottomTabNavigator();
 
-const homeTabs = (props) =>{
-  return (
-    <tab.Navigator tabBarOptions={{activeTintColor:'#DB2B39'}}>
-      <tab.Screen name = "Home" 
-        component ={()=> <Home {...props} />}
-      />
-    </tab.Navigator>
-  )
-}
+
 
 export default function App() {
   const [loading,setLoading] = useState(true);
   const [user, setUser] = useState(null);
+
+  const homeTabs = (props) =>{
+    return (
+      <tab.Navigator tabBarOptions={{activeTintColor:'#DB2B39'}}>
+        <tab.Screen name = "Home" 
+          component ={()=> <Home {...props} />}
+        />
+      </tab.Navigator>
+    )
+  }
   //remove header from screens 
   return (
     <NavigationContainer>
