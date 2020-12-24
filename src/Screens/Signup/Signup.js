@@ -47,7 +47,7 @@ export default function Signup({navigation}){
             usersRef.doc(uid)
                     .set(userData)
                     .then(() => {
-                        navigation.navigate('Home', {user: userData})
+                        navigation.navigate("Home", {user: userData})
                     })
                     .catch((error) => {
                         alert(error)
