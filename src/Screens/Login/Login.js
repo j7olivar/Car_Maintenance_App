@@ -28,7 +28,7 @@ export default function Login({navigation}) {
                             return;
                         }
                         const user =firestoreDoc.data();
-                        navigation.navigate("Home",{user})
+                        navigation.navigate("HomeTabs",{user})
                     })
                     .catch(error => {
                         console.log('error in logging in')
