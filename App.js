@@ -6,6 +6,7 @@ import { Login, Home, Signup} from './src/Screens'
 import {decode, encode} from 'base-64'
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 import {firebase} from './src/firebase/config'
+import {Ionicons} from '@expo/vector-icons'
 
 if (!global.btoa) {  global.btoa = encode }
 if (!global.atob) { global.atob = decode }
@@ -16,12 +17,19 @@ const Stack = createStackNavigator();
 //create tab navigator for the homescreen 
 const tab = createBottomTabNavigator();
 
+//where we can add more screens to the landing page 
 const HomeTabs = (props) =>{
   return (
-    <tab.Navigator tabBarOptions={{activeTintColor:'#DB2B39'}}>
+    <tab.Navigator tabBarOptions={{activeTintColor:'#DB2B39',
+      activeBackgroundColor:'#222831',inactiveBackgroundColor:'#222831',inactiveTintColor:'white',
+      style:{backgroundColor: '#222831',},
+      labelStyle:{fontSize:14},
+      }}>
       <tab.Screen name = "Home" 
         component ={()=> <Home {...props} />}
+        options={{tabBarIcon:(props)=><Ionicons name='ios-home-outline' size ={16} color = {props.color} />} }
       />
+      
     </tab.Navigator>
   )
 }
