@@ -11,7 +11,7 @@ export default function Signup({navigation}){
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     //const [car, setCar] = useState('');
-    const [year, setYear] = useState(0);
+    const [year, setYear] = useState('');
     const [make, setMake] = useState('');
     const [model, setModel] = useState('');
 
