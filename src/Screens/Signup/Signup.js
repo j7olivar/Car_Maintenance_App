@@ -37,7 +37,6 @@ export default function Signup({navigation}){
             const userData = {
                 id: uid,
                 email,
-                password,
                 fullName,
                 year,
                 make,
