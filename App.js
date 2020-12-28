@@ -2,7 +2,7 @@ import 'react-native-gesture-handler';
 import React, { useEffect, useState } from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
-import { Login, Home, Signup} from './src/Screens'
+import { Login, Home, Signup, Profile} from './src/Screens'
 import {decode, encode} from 'base-64'
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 import {firebase} from './src/firebase/config'
@@ -27,9 +27,12 @@ const HomeTabs = (props) =>{
       }}>
       <tab.Screen name = "Home" 
         component ={()=> <Home {...props} />}
-        options={{tabBarIcon:(props)=><Ionicons name='ios-home-outline' size ={16} color = {props.color} />} }
+        options={{tabBarIcon:(props)=><Ionicons name='ios-home-outline' size ={22} color = {props.color} />} }
       />
-      
+      <tab.Screen name = "Profile"
+      component = {() => <Profile {...props}/>}
+      options={{tabBarIcon: (props) => <Ionicons name = 'car-sport-outline' size = {22} color = {props.color}/>}}
+      />
     </tab.Navigator>
   )
 }
