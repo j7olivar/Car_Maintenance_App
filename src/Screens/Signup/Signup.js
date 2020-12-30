@@ -47,6 +47,8 @@ export default function Signup({navigation}){
                     .set(userData)
                     .then(() => {
                         navigation.navigate("HomeTabs", {user: userData})
+                        //this is to prevent the user from going back once landing on the home screen 
+                        navigation.reset({index:0, routes:[{name:"HomeTabs"}]})
                     })
                     .catch((error) => {
                         alert(error)

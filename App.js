@@ -17,8 +17,16 @@ const Stack = createStackNavigator();
 //create tab navigator for the homescreen 
 const tab = createBottomTabNavigator();
 
+
 //where we can add more screens to the landing page 
 const HomeTabs = (props) =>{
+  //these vars are to avoid the yellow warning about inline functions
+  //for the tab.screens 
+  const homeComp = (() => <Home {...props} />);
+  const homeOpt = ({tabBarIcon:(props)=><Ionicons name='ios-home-outline' size ={22} color = {props.color} />});
+  const profComp = (() => <Profile {...props}/>);
+  const profOpt = ({tabBarIcon: (props) => <Ionicons name = 'car-sport-outline' size = {22} color = {props.color}/>});
+  
   return (
     <tab.Navigator tabBarOptions={{activeTintColor:'#DB2B39',
       activeBackgroundColor:'#222831',inactiveBackgroundColor:'#222831',inactiveTintColor:'white',
@@ -26,12 +34,12 @@ const HomeTabs = (props) =>{
       labelStyle:{fontSize:14},
       }}>
       <tab.Screen name = "Home" 
-        component ={()=> <Home {...props} />}
-        options={{tabBarIcon:(props)=><Ionicons name='ios-home-outline' size ={22} color = {props.color} />} }
+        component ={homeComp}
+        options={homeOpt}
       />
       <tab.Screen name = "Profile"
-      component = {() => <Profile {...props}/>}
-      options={{tabBarIcon: (props) => <Ionicons name = 'car-sport-outline' size = {22} color = {props.color}/>}}
+      component = {profComp}
+      options={profOpt}
       />
     </tab.Navigator>
   )

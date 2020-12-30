@@ -29,6 +29,8 @@ export default function Login({navigation}) {
                         }
                         const user =firestoreDoc.data();
                         navigation.navigate("HomeTabs",{user})
+                        //this is to prevent the user from going back once logging in 
+                        navigation.reset({index:0, routes:[{name:"HomeTabs"}]})
                     })
                     .catch(error => {
                         console.log('error in logging in')
