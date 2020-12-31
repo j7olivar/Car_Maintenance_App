@@ -7,17 +7,24 @@ export default StyleSheet.create({
         backgroundColor:'#222831'
     },
     logoutButton:{
-        paddingTop:20,
-        fontSize:22,
-        flex:1,
-        fontWeight:'bold',
-        color:'#DB2B39',
-       justifyContent:'flex-end',
-       paddingBottom:45
+        borderRadius:5,
+        justifyContent:'center',
+        height:50,
+        backgroundColor: '#DB2B39',
+        alignItems:'center',
+        width:200,
+        alignSelf:'flex-end',
+        marginBottom:20
+    },
+    buttonTitle: {
+        color: 'white',
+        fontSize: 20,
+        fontWeight: "bold",
+        alignSelf:'center'
     },
     nameStyle:{
-        paddingTop:100,
-        color:'#DB2B39',
+        paddingTop:85,
+        color:'white',
         fontSize:35,
         fontWeight:'bold',
         alignSelf:'center',

@@ -42,6 +42,31 @@ export default function Signup({navigation}){
                 make,
                 model
             } 
+           
+
+            //writing to cars collections for the user
+            const usersCarRef = firebase.firestore().collection('cars')
+            usersCarRef
+                .doc(uid)
+                .set({
+                    cars:firebase.firestore.FieldValue.arrayUnion({
+                        id: uid,
+                        year,
+                        make,
+                        model,
+                        lastOilChange: 0,
+                        lastAirFilter: 0,
+                        lastBattery:0,
+                        lastBrakeFluid:0,
+                        lastSparkPlugs:0,
+                        lastPowerSteering:0,
+                        lastCoolant:0
+                    })
+                })
+                .then(()=>{
+                    //console.log('did it')
+                })
+            
             const usersRef = firebase.firestore().collection('users')
             usersRef.doc(uid)
                     .set(userData)
@@ -53,6 +78,8 @@ export default function Signup({navigation}){
                     .catch((error) => {
                         alert(error)
                     })
+            
+           
         })
         .catch((error)=> {
             alert(error)

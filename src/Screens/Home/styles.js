@@ -6,15 +6,13 @@ export default StyleSheet.create({
         alignItems: 'center',
         backgroundColor:'#222831'
     },
-    input: {
-        height: 48,
-        borderRadius: 5,
-        overflow: 'hidden',
-        backgroundColor: 'white',
-        marginTop: 10,
-        marginBottom: 10,
-        marginLeft: 30,
-        marginRight: 30,
-        paddingLeft: 16
+    welcomeStyle:{
+        paddingTop:90,
+        color:'white',
+        fontSize:28,
+        fontWeight:'bold',
+        alignSelf:'flex-start',
+        paddingLeft:15,
+        flex:1
     }
 })

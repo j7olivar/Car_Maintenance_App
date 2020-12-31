@@ -1,4 +1,4 @@
-import { Text, View, Alert,Button} from 'react-native'
+import { Text, View, TouchableOpacity} from 'react-native'
 import React,{useState} from 'react'
 import styles from './styles'
 import {firebase} from './../../firebase/config'
@@ -46,13 +46,11 @@ export default function Profile(props){
         </Text>
 
         <View style ={{paddingTop:50}}>
-        <Button
-            //type = 'clear'
-            buttonStyle={{alignSelf:'center', paddingTop:30}}
+        <TouchableOpacity
             onPress = {()=> onLogoutPress()}
-            title='Logout'
-            titleStyle={styles.logoutButton}
-        />
+            style={styles.logoutButton}>
+            <Text style={styles.buttonTitle}>Logout</Text>
+        </TouchableOpacity>
         </View>
         
     </View>
