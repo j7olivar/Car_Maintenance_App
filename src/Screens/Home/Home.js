@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import { Text, View, FlatList, TouchableOpacity} from 'react-native'
+import { Text, View, FlatList, TouchableOpacity, Image} from 'react-native'
 import styles from './styles'
 import {firebase} from './../../firebase/config'
 import { useEffect } from 'react/cjs/react.development';
@@ -16,7 +16,7 @@ export default function Home(props) {
         //let user = firebase.auth().currentUser.uid
         try{
             const name1 = await firebase.firestore().collection('users').doc(user).get()
-            setName(name1.data().fullName)
+            setName(name1.data().firstName)
         }
         catch(error){
             console.log(error)
@@ -39,16 +39,24 @@ export default function Home(props) {
 
     return (
         <View style = {styles.container}>
-            <Text style={styles.welcomeStyle}>Hello, {name}!</Text>
+            <Text style={styles.welcomeStyle}>Hello,  {name}!</Text> 
+            <Text style ={styles.myCars}>My Cars</Text>
             <FlatList
+                style={styles.cotainerList}
+                keyExtractor={(item,index) => (item.id)}
                 data = {cars}//this is where we put list of cars the user has
                 renderItem = {({item}) => (
-                    <TouchableOpacity> 
-                        <Text>
-                            {item.year}
+                    <TouchableOpacity style ={styles.carItem}> 
+                        <Text style={styles.carItemText}>
+                            {item.year} {item.make} {item.model}
                         </Text>
                     </TouchableOpacity>
                 )}
+            />
+           
+           <Image
+                style={styles.logo}
+                source={require('../../../assets/icon.png')}
             />
         </View>
     )

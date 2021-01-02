@@ -6,11 +6,11 @@ import {firebase} from '../../firebase/config'
 
 export default function Signup({navigation}){
     //data we are saving
-    const [fullName, setFullName] = useState('');
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-    //const [car, setCar] = useState('');
     const [year, setYear] = useState('');
     const [make, setMake] = useState('');
     const [model, setModel] = useState('');
@@ -37,7 +37,8 @@ export default function Signup({navigation}){
             const userData = {
                 id: uid,
                 email,
-                fullName,
+                firstName,
+                lastName,
                 year,
                 make,
                 model
@@ -46,11 +47,15 @@ export default function Signup({navigation}){
 
             //writing to cars collections for the user
             const usersCarRef = firebase.firestore().collection('cars')
+            //did id attribute like this so they can be unique (worls for users
+            // who have multiples of the same car )
             usersCarRef
                 .doc(uid)
                 .set({
                     cars:firebase.firestore.FieldValue.arrayUnion({
-                        id: uid,
+                        id: (year+make+model+(Math.floor(Math.random()*100000000
+                        )).toString()),
+                        owner: uid,
                         year,
                         make,
                         model,
@@ -94,10 +99,17 @@ export default function Signup({navigation}){
                 <Image style = {styles.logo}
                 source ={require('../../../assets/icon.png')}/>
                 <TextInput style = {styles.input}
-                    placeholder ='Full Name'
+                    placeholder ='First Name'
                     placeholderTextColor='#aaaaaa'
-                    onChangeText ={(text) => setFullName(text)}
-                    value = {fullName}
+                    onChangeText ={(text) => setFirstName(text)}
+                    value = {firstName}
+                    autoCapitalize = 'none'
+                />
+                <TextInput style = {styles.input}
+                    placeholder ='Last Name'
+                    placeholderTextColor='#aaaaaa'
+                    onChangeText ={(text) => setLastName(text)}
+                    value = {lastName}
                     autoCapitalize = 'none'
                 />
                 <TextInput style = {styles.input}

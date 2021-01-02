@@ -12,7 +12,7 @@ export default function Profile(props){
         let user = firebase.auth().currentUser.uid
         try{
             const name1 = await firebase.firestore().collection('users').doc(user).get()
-            setName(name1.data().fullName)
+            setName(name1.data().firstName+ ' '+name1.data().lastName)
         }
         catch(error){
             console.log(error)
