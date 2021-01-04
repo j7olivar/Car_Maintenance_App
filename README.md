@@ -10,14 +10,23 @@ pages.
 
 ### Screens:
 
-![Splash](assets/Update_1/Splash.PNG)
+#### Splash
 
-![Login](/assets/Update_1/Login.PNG)
+![Splash](https://github.com/j7olivar/Car_Maintenance_App/blob/master/assets/Update_1%20/Splash.PNG)
 
-![Signup1](Car_Maintenance_App/assets/Update_1/Signup1.PNG)
+#### Login
+![Login](https://github.com/j7olivar/Car_Maintenance_App/blob/master/assets/Update_1%20/Login.PNG)
 
-![Signup2](Car_Maintenance_App/assets/Update_1/Signup2.PNG)
+#### Signup 
 
-![Home](Car_Maintenance_App/assets/Update_1/Home.PNG)
+![Signup1](https://github.com/j7olivar/Car_Maintenance_App/blob/master/assets/Update_1%20/Signup1.PNG)
 
-![Profile](Car_Maintenance_App/assets/Update_1/Profile.PNG)
+![Signup2](https://github.com/j7olivar/Car_Maintenance_App/blob/master/assets/Update_1%20/Signup2.PNG)
+
+#### Home
+
+![Home](https://github.com/j7olivar/Car_Maintenance_App/blob/master/assets/Update_1%20/Home.PNG)
+
+#### Profile
+
+![Profile](https://github.com/j7olivar/Car_Maintenance_App/blob/master/assets/Update_1%20/Profile.PNG)
