@@ -27,6 +27,9 @@ pages.
 
 ![Home](https://github.com/j7olivar/Car_Maintenance_App/blob/master/assets/Update_1%20/Home.PNG)
 
+#### Add Car
+![AddCar](https://github.com/j7olivar/Car_Maintenance_App/blob/master/assets/Update_1%20/AddCar.PNG)
+
 #### Profile
 
 ![Profile](https://github.com/j7olivar/Car_Maintenance_App/blob/master/assets/Update_1%20/Profile.PNG)
