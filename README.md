@@ -10,9 +10,14 @@ pages.
 
 ### Screens:
 
-![Splash](Car_Maintenance_App/assets/Update_1/Splash.PNG)
-![Login](Car_Maintenance_App/assets/Update_1/Login.PNG)
+![Splash](/assets/Update_1/Splash.PNG)
+
+![Login](/assets/Update_1/Login.PNG)
+
 ![Signup1](Car_Maintenance_App/assets/Update_1/Signup1.PNG)
+
 ![Signup2](Car_Maintenance_App/assets/Update_1/Signup2.PNG)
+
 ![Home](Car_Maintenance_App/assets/Update_1/Home.PNG)
+
 ![Profile](Car_Maintenance_App/assets/Update_1/Profile.PNG)
