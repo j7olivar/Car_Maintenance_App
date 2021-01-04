@@ -10,9 +10,9 @@ pages.
 
 ### Screens:
 
-![Splash](https://drive.google.com/drive/u/0/folders/11HsXco-05VMhhKTSNFopP9jVoLVQqZlZ)
-![Login](https://drive.google.com/drive/u/0/folders/11HsXco-05VMhhKTSNFopP9jVoLVQqZlZ)
-![Signup1](https://drive.google.com/drive/u/0/folders/11HsXco-05VMhhKTSNFopP9jVoLVQqZlZ)
-![Signup2](https://drive.google.com/drive/u/0/folders/11HsXco-05VMhhKTSNFopP9jVoLVQqZlZ)
-![Home](https://drive.google.com/drive/u/0/folders/11HsXco-05VMhhKTSNFopP9jVoLVQqZlZ)
-![Profile](https://drive.google.com/drive/u/0/folders/11HsXco-05VMhhKTSNFopP9jVoLVQqZlZ)
+![Splash](Car_Maintenance_App/assets/Update_1/Splash.PNG)
+![Login](Car_Maintenance_App/assets/Update_1/Login.PNG)
+![Signup1](Car_Maintenance_App/assets/Update_1/Signup1.PNG)
+![Signup2](Car_Maintenance_App/assets/Update_1/Signup2.PNG)
+![Home](Car_Maintenance_App/assets/Update_1/Home.PNG)
+![Profile](Car_Maintenance_App/assets/Update_1/Profile.PNG)
