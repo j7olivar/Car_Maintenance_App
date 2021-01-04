@@ -10,7 +10,7 @@ pages.
 
 ### Screens:
 
-![Splash](/assets/Update_1/Splash.PNG)
+![Splash](assets/Update_1/Splash.PNG)
 
 ![Login](/assets/Update_1/Login.PNG)
 
