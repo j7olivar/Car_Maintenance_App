@@ -9,9 +9,14 @@ export default StyleSheet.create({
     },
     container: {
         flex: 1,
-        alignItems: 'center',
         alignContent:'flex-start',
         backgroundColor:'#222831'
+    },
+    addCarContainer:{
+        flex: 1,
+        alignContent:'flex-start',
+        backgroundColor:'#222831',
+        padding:30
     },
     welcomeStyle:{
         paddingTop:90,
@@ -50,5 +55,56 @@ export default StyleSheet.create({
         paddingTop:32,
         fontWeight:'bold',
         fontSize:25
+    },
+    addButtonText:{
+        fontSize:18,
+        fontWeight:'bold',
+        color:'white',
+        alignSelf:'flex-end',
+    },
+    addNewCarText:{
+        fontSize:30,
+        fontWeight:'bold',
+        color:'#A31C1C',
+        paddingTop:80,
+        alignSelf:'center',
+        paddingBottom:40
+    },
+    sameRow:{
+        flexDirection:'row',
+        justifyContent:'space-between',
+        width:'100%',
+        alignItems:'center'
+    },
+    addCarButton:{
+        height: 48,
+        borderRadius:5,
+        overflow: 'hidden',
+        backgroundColor: 'green',
+        marginTop: 25,
+        marginBottom: 10,
+        marginLeft: 30,
+        marginRight: 30,
+        paddingLeft: 35,
+        paddingRight: 35
+    },
+    cancelCarButton:{
+        height: 48,
+        borderRadius:5,
+        overflow: 'hidden',
+        backgroundColor: '#ff443a',
+        marginTop: 25,
+        marginBottom: 10,
+        marginLeft: 30,
+        marginRight: 30,
+        paddingLeft: 35,
+        paddingRight: 35
+    },
+    addCarButtonText:{
+        fontSize: 16,
+        marginTop: 13,
+        color: "white",
+        fontWeight: "bold",
+        alignSelf: "center",
     }
 })
