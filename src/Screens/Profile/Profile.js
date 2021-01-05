@@ -1,58 +1,62 @@
-import { Text, View, TouchableOpacity} from 'react-native'
-import React,{useState} from 'react'
-import styles from './styles'
-import {firebase} from './../../firebase/config'
+import { Text, View, TouchableOpacity } from 'react-native';
+import React, { useState } from 'react';
+import styles from './styles';
+import { firebase } from './../../firebase/config';
 import { useEffect } from 'react/cjs/react.development';
 
-export default function Profile(props){
-    //var to hold the name of the user that will be displayed on top of profile page
-    const [name, setName] = useState('');
+export default function Profile(props) {
+	//var to hold the name of the user that will be displayed on top of profile page
+	const [name, setName] = useState('');
 
-    const getName = async () =>{
-        let user = firebase.auth().currentUser.uid
-        try{
-            const name1 = await firebase.firestore().collection('users').doc(user).get()
-            setName(name1.data().firstName+ ' '+name1.data().lastName)
-        }
-        catch(error){
-            console.log(error)
-        }
-    }
+	const getName = async () => {
+		let user = firebase.auth().currentUser.uid;
+		try {
+			const name1 = await firebase
+				.firestore()
+				.collection('users')
+				.doc(user)
+				.get();
+			setName(name1.data().firstName + ' ' + name1.data().lastName);
+		} catch (error) {
+			console.log(error);
+		}
+	};
 
-    useEffect(() =>{
-        getName();
-    },[])
+	useEffect(() => {
+		getName();
+	}, []);
 
-    //function behind logout button
-    const onLogoutPress = ()=>{
-        console.log('pressed logout')
-        firebase
-        .auth()
-        .signOut()
-        .then(()=>{
-            props.navigation.navigate('Login');
-            //this to avoid the user from going back to the profile page after logging out
-            props.navigation.reset({index:0, routes: [{name:'Login'}]});
-        })
-        .catch((error)=>{
-            alert(error);
-        })
-    }
+	//function behind logout button
+	const onLogoutPress = () => {
+		console.log('pressed logout');
+		firebase
+			.auth()
+			.signOut()
+			.then(() => {
+				props.navigation.navigate('Login');
+				//this to avoid the user from going back to the profile page after logging out
+				props.navigation.reset({ index: 0, routes: [{ name: 'Login' }] });
+			})
+			.catch((error) => {
+				alert(error);
+			});
+	};
 
-    return (
-    <View style = {styles.container}>
-        <Text style ={styles.nameStyle}>
-            {name}
-        </Text>
+	return (
+		<View style={styles.container}>
+			<Text style={styles.nameStyle}>{name}</Text>
 
-        <View style ={{paddingTop:50}}>
-        <TouchableOpacity
-            onPress = {()=> onLogoutPress()}
-            style={styles.logoutButton}>
-            <Text style={styles.buttonTitle}>Logout</Text>
-        </TouchableOpacity>
-        </View>
-        
-    </View>
-    )
+			<View style={{ paddingTop: 50 }}>
+				<TouchableOpacity style={styles.referButton}>
+					<Text style={styles.buttonTitle}> Share CarMate </Text>
+				</TouchableOpacity>
+				<TouchableOpacity
+					onPress={() => onLogoutPress()}
+					style={styles.logoutButton}
+				>
+					<Text style={styles.buttonTitle}>Logout</Text>
+				</TouchableOpacity>
+			</View>
+		</View>
+	);
 }
