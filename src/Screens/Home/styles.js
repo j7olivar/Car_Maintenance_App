@@ -37,7 +37,7 @@ export default StyleSheet.create({
 		paddingLeft: 15,
 		paddingBottom: 9,
 	},
-	cotainerList: {
+	containerList: {
 		alignSelf: 'center',
 		alignContent: 'flex-start',
 		borderRadius: 8,

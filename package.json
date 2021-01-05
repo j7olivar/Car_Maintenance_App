@@ -8,6 +8,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@expo-google-fonts/staatliches": "^0.1.0",
     "@expo/vector-icons": "^12.0.2",
     "@react-native-community/masked-view": "^0.1.10",
     "@react-navigation/bottom-tabs": "^5.11.2",
@@ -15,6 +16,7 @@
     "@react-navigation/stack": "^5.12.8",
     "base-64": "^1.0.0",
     "expo": "~40.0.0",
+    "expo-font": "~8.4.0",
     "expo-status-bar": "~1.0.3",
     "firebase": "^8.2.1",
     "node": "^15.4.0",
