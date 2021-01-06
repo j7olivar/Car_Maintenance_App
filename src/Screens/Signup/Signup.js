@@ -3,6 +3,7 @@ import { Image, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import styles from './styles';
 import { firebase } from '../../firebase/config';
+import CustomFont from '../../CustomFont.js';
 
 export default function Signup({ navigation }) {
 	//data we are saving
@@ -103,7 +104,10 @@ export default function Signup({ navigation }) {
 					style={styles.logo}
 					source={require('../../../assets/icon.png')}
 				/>
-				<Text style={styles.profileInfoHeader}> Personal Information </Text>
+				<CustomFont styling={styles.profileInfoHeader}>
+					{' '}
+					Personal Information{' '}
+				</CustomFont>
 				<TextInput
 					style={styles.input}
 					placeholder='First Name'
@@ -148,7 +152,10 @@ export default function Signup({ navigation }) {
 					underlineColorAndroid='transparent'
 					autoCapitalize='none'
 				/>
-				<Text style={styles.carInfoHeader}> Car Information </Text>
+				<CustomFont styling={styles.carInfoHeader}>
+					{' '}
+					Car Information{' '}
+				</CustomFont>
 				<TextInput
 					style={styles.input}
 					placeholder='Year'
@@ -175,16 +182,16 @@ export default function Signup({ navigation }) {
 					autoCapitalize='none'
 				/>
 				<TouchableOpacity style={styles.button} onPress={() => onSignupPress()}>
-					<Text style={styles.buttonTitle}>Create Account</Text>
+					<CustomFont styling={styles.buttonTitle}>Create Account</CustomFont>
 				</TouchableOpacity>
 				<View style={styles.footerView}>
-					<Text style={styles.footerText}>
-						Already got an account?
+					<CustomFont styling={styles.footerCustomFont}>
+						{'Already have an account? '}
 						<Text onPress={onLoginPress} style={styles.footerLink}>
 							{' '}
 							Log in
 						</Text>
-					</Text>
+					</CustomFont>
 				</View>
 			</KeyboardAwareScrollView>
 		</View>

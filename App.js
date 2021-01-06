@@ -7,7 +7,6 @@ import { decode, encode } from 'base-64';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { firebase } from './src/firebase/config';
 import { Ionicons } from '@expo/vector-icons';
-import { CustomFont } from './CustomFont';
 
 if (!global.btoa) {
 	global.btoa = encode;

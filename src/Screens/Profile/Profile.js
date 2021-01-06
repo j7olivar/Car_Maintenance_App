@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import styles from './styles';
 import { firebase } from './../../firebase/config';
 import { useEffect } from 'react/cjs/react.development';
+import CustomFont from '../../CustomFont.js';
 
 export default function Profile(props) {
 	//var to hold the name of the user that will be displayed on top of profile page
@@ -44,17 +45,17 @@ export default function Profile(props) {
 
 	return (
 		<View style={styles.container}>
-			<Text style={styles.nameStyle}>{name}</Text>
+			<CustomFont styling={styles.nameStyle}>{name}</CustomFont>
 
 			<View style={{ paddingTop: 50 }}>
 				<TouchableOpacity style={styles.referButton}>
-					<Text style={styles.buttonTitle}> Share CarMate </Text>
+					<CustomFont styling={styles.buttonTitle}> Share CarMate </CustomFont>
 				</TouchableOpacity>
 				<TouchableOpacity
 					onPress={() => onLogoutPress()}
 					style={styles.logoutButton}
 				>
-					<Text style={styles.buttonTitle}>Logout</Text>
+					<CustomFont styling={styles.buttonTitle}>Logout</CustomFont>
 				</TouchableOpacity>
 			</View>
 		</View>

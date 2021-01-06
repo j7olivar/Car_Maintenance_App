@@ -15,6 +15,11 @@ export default StyleSheet.create({
 		alignSelf: 'center',
 		margin: 30,
 	},
+	title: {
+		fontSize: 50,
+		alignSelf: 'center',
+		color: 'white',
+	},
 	input: {
 		height: 48,
 		borderRadius: 5,

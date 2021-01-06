@@ -13,6 +13,7 @@ import { useEffect } from 'react/cjs/react.development';
 import { Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/AntDesign';
 import AddCar from './AddCar';
+import CustomFont from '../../CustomFont.js';
 
 export default function Home(props) {
 	//var to hold the name of the user that will be displayed on top of profile page
@@ -162,9 +163,9 @@ export default function Home(props) {
 
 	return (
 		<View style={styles.container}>
-			<Text style={styles.welcomeStyle}>Hello, {name}!</Text>
+			<CustomFont styling={styles.welcomeStyle}>Hello, {name}!</CustomFont>
 			<View style={styles.sameRow}>
-				<Text style={styles.myCars}>My Cars</Text>
+				<CustomFont styling={styles.myCars}>My Cars</CustomFont>
 				<Button
 					icon={<Icon name='plus' size={18} color='white' />}
 					type='clear'
@@ -192,9 +193,9 @@ export default function Home(props) {
 				data={cars} //this is where we put list of cars the user has
 				renderItem={({ item }) => (
 					<TouchableOpacity style={styles.carItem}>
-						<Text style={styles.carItemText}>
+						<CustomFont styling={styles.carItemText}>
 							{item.year} {item.make} {item.model}
-						</Text>
+						</CustomFont>
 					</TouchableOpacity>
 				)}
 			/>
