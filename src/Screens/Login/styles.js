@@ -13,12 +13,13 @@ export default StyleSheet.create({
 		height: 120,
 		width: 120,
 		alignSelf: 'center',
-		margin: 30,
+		margin: 10,
 	},
 	title: {
 		fontSize: 50,
 		alignSelf: 'center',
 		color: 'white',
+		paddingTop:5
 	},
 	input: {
 		height: 48,

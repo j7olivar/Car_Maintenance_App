@@ -64,6 +64,7 @@ export default StyleSheet.create({
 		flex: 1,
 		alignItems: 'center',
 		marginTop: 20,
+		paddingBottom:40
 	},
 	footerText: {
 		fontSize: 16,
@@ -76,4 +77,7 @@ export default StyleSheet.create({
 		fontWeight: 'bold',
 		fontSize: 16,
 	},
+	footerCustomFont:{
+		color:'#e3e3e3'
+	}
 });

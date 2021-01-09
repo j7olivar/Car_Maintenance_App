@@ -49,7 +49,7 @@ export default function Profile(props) {
 
 			<View style={{ paddingTop: 50 }}>
 				<TouchableOpacity style={styles.referButton}>
-					<CustomFont styling={styles.buttonTitle}> Share CarMate </CustomFont>
+					<CustomFont styling={styles.buttonTitle}> Share ServiceMate </CustomFont>
 				</TouchableOpacity>
 				<TouchableOpacity
 					onPress={() => onLogoutPress()}

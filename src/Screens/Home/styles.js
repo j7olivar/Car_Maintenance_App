@@ -21,7 +21,7 @@ export default StyleSheet.create({
 		padding: 30,
 	},
 	welcomeStyle: {
-		paddingTop: 90,
+		paddingTop: 80,
 		color: colors.secondary,
 		fontSize: 30,
 		fontWeight: 'bold',

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, Button, Modal, TouchableOpacity, View } from 'react-native';
+import { Text, Button, Modal, TouchableOpacity, View, Alert} from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { set } from 'react-native-reanimated';
 import { FloatingLabelInput } from 'react-native-floating-label-input';
@@ -52,6 +52,14 @@ const AddCar = (props) => {
 	};
 
 	const addCarHandler = () => {
+		//checks if all fields were filled out
+		if(year.length == 0 || make.length == 0 || model.length == 0 || 
+		  airFilter.length == 0 || battery.length ==0 || brakeFluid.length == 0||
+		  coolant.length == 0 || oilChange.length == 0|| 
+		  powerSteering.length == 0|| sparkPlugs.length == 0){
+			Alert.alert('Please fill in all fields')
+			return;
+		}
 		props.addCarHandler(
 			year,
 			make,
@@ -209,7 +217,7 @@ const AddCar = (props) => {
 							style={styles.addCarButton}
 							onPress={addCarHandler}
 						>
-							<CustomFont styling={styles.addCarButtonCustomFont}>
+							<CustomFont styling={styles.addCarButtonText}>
 								{' '}
 								Add
 							</CustomFont>

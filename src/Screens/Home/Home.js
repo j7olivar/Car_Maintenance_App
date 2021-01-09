@@ -167,17 +167,17 @@ export default function Home(props) {
 			<View style={styles.sameRow}>
 				<CustomFont styling={styles.myCars}>My Cars</CustomFont>
 				<Button
-					icon={<Icon name='plus' size={18} color='white' />}
+					icon={<Icon name='plus' size={20} color='white' />}
 					type='clear'
 					iconRight
 					raised
 					buttonStyle={{
 						alignSelf: 'flex-end',
-						paddingRight: 14,
+						paddingRight: 18,
 						paddingTop: 35,
 					}}
 					onPress={() => setIsAddMode(true)}
-					title='Add Car    '
+					//title='Add Car    '
 					titleStyle={styles.addButtonText}
 				/>
 			</View>
