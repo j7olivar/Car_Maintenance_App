@@ -72,6 +72,18 @@ const AddCar = (props) => {
 			coolant,
 			powerSteering
 		);
+		//we do this to reset the values of these variables so when we press
+		//add again, it doesnt have the old values
+		setYear(''); 
+		setMake('');
+		setModel('');
+		setAirFilter('');
+		setBattery('');
+		setBrakeFluid('');
+		setCoolant('');
+		setOilChange('');
+		setPowerSteering('');
+		setSparkPlugs('');
 	};
 
 	return (

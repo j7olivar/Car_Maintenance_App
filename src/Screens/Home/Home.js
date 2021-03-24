@@ -40,6 +40,7 @@ export default function Home(props) {
 
 	useEffect(() => {
 		getName();
+		let isMounted = true;
 		//retrieve information from firstore and set it to our cars to display
 		const usersRef = firebase.firestore().collection('cars');
 		usersRef.doc(user).onSnapshot((docSnapshot) => {
@@ -49,6 +50,8 @@ export default function Home(props) {
 				setCars(docSnapshot.data().cars);
 			}
 		});
+		
+		return () => (isMounted = false);
 	}, []);
 
 	//shows modal on screen and collects the data below and adds it to cars
@@ -146,15 +149,9 @@ export default function Home(props) {
 						lastPowerSteering,
 					}),
 				});
-		}
-		/*
-        I DONT THINK WE WILL EVER NEED TO CREATE AN INSTANCE WHERE THEY DONT
-        HAVE A DOCUMENT B/C IT GETS CREATED WHEN THEY SIGNUP
-        -create a new document for them
-        else{
 
-        }
-        */
+				
+		}
 	};
 	//removes the modal from screen
 	const cancelAddCar = () => {
